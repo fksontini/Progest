@@ -10,6 +10,6 @@ namespace Domain
     {
         public int TeamId { get; set; }
         public person teamLeader { get; set; }
-        public IEnumerable< person> Team_members { get; set; }
+        public IEnumerable< Project> projet { get; set; }
     }
 }
