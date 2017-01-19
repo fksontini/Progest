@@ -25,7 +25,7 @@ namespace WebApplication.Models
             : base("Mycnx", throwIfV1Schema: false)
         {
         }
-        public DbSet<Person> Person { get; set; }
+        public DbSet<Person> vipPerson { get; set; }
         public DbSet<Discussion> Discussion { get; set; }
         public static ApplicationDbContext Create()
         {

@@ -11,8 +11,8 @@ namespace Domain
     {
         [Key]
         public int DiscID { get; set; }
+        [DataType(DataType.Date)]
         public DateTime DateStart { get; set; }
-        public SimplePerson SimplePerson { get; set; }
-        public VipPerson VipPerson { get; set; }
+      
     }
 }

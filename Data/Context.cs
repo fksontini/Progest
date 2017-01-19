@@ -11,7 +11,7 @@ namespace Data
 {
     public class Context:DbContext
     {
-        public Context():base("Name=MyProject")
+        public Context():base("Name=MyCnx")
         {
                
         }
