@@ -22,14 +22,21 @@ namespace WebApplication.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("Mycnx", throwIfV1Schema: false)
+            : base("Mycnx", throwIfV1Schema: true)
         {
         }
-        public DbSet<Person> vipPerson { get; set; }
-        public DbSet<Discussion> Discussion { get; set; }
-        public static ApplicationDbContext Create()
+    
+    public DbSet<Project> project { get; set; }
+    public DbSet<Backlog> module { get; set; }
+
+
+    public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Domain.Features> Features { get; set; }
+
+        public System.Data.Entity.DbSet<Domain.Tasks> Tasks { get; set; }
     }
 }

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Domain.Backlog>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Start_Date_Real)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Start_Date_Estimated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End_Date_Real)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End_Date_Estimated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Start_Date_Real)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Start_Date_Estimated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_Date_Real)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_Date_Estimated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BacklogId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BacklogId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BacklogId })
+        </td>
+    </tr>
+}
+
+</table>

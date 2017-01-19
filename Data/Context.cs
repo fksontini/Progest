@@ -1,4 +1,5 @@
 ﻿
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -15,9 +16,9 @@ namespace Data
         {
                
         }
-        //public DbSet<your entity> entity name{ get; set; }
-     
-
+        public DbSet<Project> project{ get; set; }
+        public DbSet<Backlog> module { get; set; }
+        public DbSet<Tasks> tasks { get; set; }
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
